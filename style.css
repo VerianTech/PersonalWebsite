@@ -21,7 +21,7 @@ html, body {
     background-color: seagreen;
 }
 
-#hamburger_menu {
+#second_container #hamburger_menu {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -31,7 +31,7 @@ html, body {
     opacity: 1;
 }
 
-#hamburger_menu #p1 {
+#second_container #hamburger_menu #p1 {
     position: absolute;
     margin: auto;
     top: 0px;
@@ -40,33 +40,62 @@ html, body {
     height: 100%;
 }
 
-#hamburger_menu #line1 {
+#second_container #hamburger_menu #line1 {
     position: absolute;
     left: 25%;
     top: 10%;
 }
 
-#hamburger_menu #line2 {
+#second_container #hamburger_menu #line2 {
     position: absolute;
     left:25%;
     top: 50%;
 }
 
-#hamburger_menu .long_line {
+#second_container #hamburger_menu .long_line {
     background-color: grey;
     border: 2px solid grey;
+    border-radius: 3px;
     width: 50%;
 }
 
-#hamburger_menu #short_line {
+#second_container #hamburger_menu #short_line {
     position: absolute;
     top: 30%;
     left: 30%;
     background-color: grey;
     border: 2px solid grey;
+    border-radius: 3px;
     width: 40%;
 }
 
 #second_container:hover {
     opacity: 1;
+}
+
+#second_container:hover #hamburger_menu .long_line {
+    width: 96%;
+    background-color: darkslategray;
+    border: 2px solid darkslategray;
+    opacity: 1;
+}
+
+#second_container:hover #hamburger_menu #line1 {
+    left: 0%;
+}
+
+#second_container:hover #hamburger_menu #line2 {
+    left: 0%;
+}
+
+#second_container:hover #hamburger_menu #short_line {
+    left: 0%;
+    width: 96%;
+    background-color: darkslategray;
+    border: 2px solid darkslategray;
+    opacity: 1;
+}
+
+#second_container:hover {
+    width: 10%;
 }
