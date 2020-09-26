@@ -117,7 +117,8 @@ li a {
     font-size: 0%;
     color: floralwhite;
     text-align: center;
-    padding-bottom: 70%;
+    padding-top: 25%;
+    padding-bottom: 25%;
     text-decoration: none;
     opacity: 0;
 }
@@ -128,5 +129,16 @@ li a {
 }
 
 #second_container li a:hover {
-    opacity: 1;
+    background-color: grey;
+    color: goldenrod;
+}
+
+#frame1 {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    background-color: ivory;
+    opacity: 0;
+    height: 0%;
+    width: 0%;
 }
