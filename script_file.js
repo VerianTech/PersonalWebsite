@@ -18,7 +18,7 @@ function function1() {
 
 function resizeIframe(obj) {
     obj.style.transition = "all 4s, opacity 0s";
-    obj.style.width = 75 + '%';
+    obj.style.width = 85 + '%';
     obj.style.height = 90 + '%';
     obj.style.opacity = 1;
 }
