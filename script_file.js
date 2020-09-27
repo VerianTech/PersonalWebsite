@@ -22,3 +22,25 @@ function resizeIframe(obj) {
     obj.style.height = 90 + '%';
     obj.style.opacity = 1;
 }
+
+function function_iframe(obj) {
+    var x = document.getElementById("frame1");
+    if (obj == "home") {
+        x.src = "pages/home.html";
+    }
+    if (obj == "skills") {
+        x.src = "pages/skills.html";
+    }
+    if (obj == "education") {
+        x.src = "pages/education.html";
+    }
+    if (obj == "hobbies") {
+        x.src = "pages/hobbies.html";
+    }
+    if (obj == "interests") {
+        x.src = "pages/interests.html";
+    }
+    if (obj == "contact") {
+        x.src = "pages/contact.html";
+    }
+}
