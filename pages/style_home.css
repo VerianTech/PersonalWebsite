@@ -1,12 +1,26 @@
 #photo1 {
     position: fixed;
-    top: 2%;
-    right: 2%;
+    top: 10%;
+    right: 6%;
     opacity: 0;
 }
 
 #name {
-    padding-left:10%;
+    padding-left: 10%;
     position:fixed;
+    top: 5%;
+    font-family: arial;
+    opacity: 0;
+}
+
+#para1 {
+    position: fixed;
+    font-family: arial;
+    font-size: 120%;
+    text-align: justify;
+    font-style: italic;
+    top: 17%;
+    left: 10%;
+    width: 50%;
     opacity: 0;
 }

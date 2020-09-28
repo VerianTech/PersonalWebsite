@@ -28,5 +28,8 @@ function functie_load() {
         var obj1 = document.getElementById("name");
         obj1.style.transition = "all 2s";
         obj1.style.opacity = 1;
+        var obj2 = document.getElementById("para1");
+        obj2.style.transition = "all 2s";
+        obj2.style.opacity = 1;
     }
 }
