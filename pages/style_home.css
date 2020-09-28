@@ -4,3 +4,9 @@
     right: 2%;
     opacity: 0;
 }
+
+#name {
+    padding-left:10%;
+    position:fixed;
+    opacity: 0;
+}

@@ -1,4 +1,5 @@
 function function1() {
+    localStorage.setItem("visited", "false");
     setTimeout(resizeIframe, 1500, document.getElementById("frame1"));
     var x = document.getElementsByClassName("long_line");
     var y = document.getElementById("short_line");
@@ -43,4 +44,5 @@ function function_iframe(obj) {
     if (obj == "contact") {
         x.src = "pages/contact.html";
     }
+    localStorage.setItem("visited", "true");
 }
