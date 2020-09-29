@@ -220,3 +220,121 @@
     background-color: green;
     border-radius: 20px;
 }
+
+/* sisteme de operare */
+
+#ubuntu {top: 9%;}
+#windows {top: 22%;}
+
+.percent8 {
+    width: 70%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.percent9 {
+    width: 50%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+}
+
+#p8 {
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
+
+#p9 {
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 18%;
+    left: 3%;
+}
+
+/* tools */
+
+#git {top: 9%;}
+#javafx {top: 22%;}
+#net {top: 35%;}
+#shell {top: 48%;}
+#photoshop {top: 61%;}
+
+#p10 {
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+
+#p11 {
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 18%;
+    left: 2%;
+}
+
+#p12 {
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 31%;
+    left: 2%;
+}
+
+#p13 {
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 44%;
+    left: 2%;
+}
+
+#p14 {
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 57%;
+    left: 2%;
+}
+
+.percent10 {
+    width: 80%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.percent11 {
+    width: 70%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.percent13 {
+    width: 60%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.percent12 {
+    width: 65%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.percent14 {
+    width: 55%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+}

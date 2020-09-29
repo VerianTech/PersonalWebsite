@@ -121,6 +121,10 @@ li a {
     padding-bottom: 25%;
     text-decoration: none;
     opacity: 0;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #second_container:hover li a {
