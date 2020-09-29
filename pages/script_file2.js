@@ -28,8 +28,39 @@ function functie_load() {
         var obj1 = document.getElementById("name");
         obj1.style.transition = "all 2s";
         obj1.style.opacity = 1;
+        setTimeout(functie3, 1000);
+    }
+
+    function functie3() {
         var obj2 = document.getElementById("para1");
-        obj2.style.transition = "all 2s";
+        obj2.style.transition = "opacity 2s";
         obj2.style.opacity = 1;
     }
+}
+
+function button1() {
+    var x = document.getElementById("languages");
+    var y = document.getElementById("technologies");
+    var z = document.getElementById("operatingsys");
+    x.style.opacity = 1;
+    y.style.opacity = 0;
+    z.style.opacity = 0;
+}
+
+function button2() {
+    var x = document.getElementById("languages");
+    var y = document.getElementById("technologies");
+    var z = document.getElementById("operatingsys");
+    x.style.opacity = 0;
+    y.style.opacity = 1;
+    z.style.opacity = 0;
+}
+
+function button3() {
+    var x = document.getElementById("languages");
+    var y = document.getElementById("technologies");
+    var z = document.getElementById("operatingsys");
+    x.style.opacity = 0;
+    y.style.opacity = 0;
+    z.style.opacity = 1;
 }

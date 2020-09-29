@@ -1,5 +1,7 @@
 function function1() {
     localStorage.setItem("visited", "false");
+    var auxiliary = document.getElementById("frame1");
+    auxiliary.src = "pages/home.html";
     setTimeout(resizeIframe, 1500, document.getElementById("frame1"));
     var x = document.getElementsByClassName("long_line");
     var y = document.getElementById("short_line");
