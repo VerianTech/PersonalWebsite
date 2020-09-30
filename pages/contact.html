@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            input[type=submit] {
+                position: fixed;
+                left: 45%;
+                top: 80%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 1% 1%;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            #text1 {
+                position: fixed;
+                left: 20%;
+                top: 15%;  
+                width: 40%;
+                background-color: wheat;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            #text2 {
+                position: fixed;
+                left: 20%;
+                top: 25%;  
+                width: 40%; 
+                background-color: wheat;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            textarea {
+                position: fixed;
+                left: 20%;
+                top: 40%; 
+                width: 60%;
+                height: 30%;
+                background-color: wheat;
+                color: black;
+                resize: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="font-family: arial;padding-left: 10%; padding-top: 2%;">Contact:</h2>
+        <form action="subscriberform.php" method="POST" name="EmailForm">    
+            <input id="text1" type="text" size="19" name="ContactName" placeholder="Name"/>
+            <textarea placeholder="Message"></textarea>
+            <input id="text2" type="text" size="19" name="email" placeholder="Your e-mail"/>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
