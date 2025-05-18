@@ -30,8 +30,49 @@ function App() {
   
 		{/* Main content */}
 		<main>
-		  <div className="text-xl">TODO - Hello There section</div>
-		  <div className="text-xl">TODO - General Things section</div>
+		  <div className="flex justify-between py-4 px-10 items-center text-xl gap-6 md:gap-10">
+			<div className="rounded-full overflow-hidden shadow-md
+				w-48 h-48 md:w-54 md:h-54 flex-shrink-0">
+				<img
+					src="./src/assets/me_round.png"
+					alt="image"
+					className="w-full h-full object-cover aspect-square"/>
+			</div>
+			<div className="text-center md:text-left font-bold text-gray-300">
+				Hello there 👋🏻
+				<br/><br/>
+				I’m Dorian, computer science enthusiast and software engineer
+				<br/><br/>
+				I work on building high scalable systems, below you can find my personal portfolio as well as my CV
+			</div>
+		  </div>
+		  <div className="text-xl py-8">
+			<div className="px-4 font-bold text-gray-300">
+				Some general things about me 🪐
+			</div>
+			<div className="grid grid-cols-1 md:grid-cols-3 justify-center text-center py-4 px-4 items-center
+				font-bold text-gray-300 text-sm gap-4 md:gap-6">
+				<div>
+					<p>Software engineer with experience in<br/>
+					development, DevOps and site<br/>
+					reliability engineering. Always looking forward<br/>
+					to new challenges</p>
+				</div>
+				<div>
+					<p>Computer Science and<br/>
+					Engineering student, lifelong<br/>
+					learner</p><br/>
+				</div>
+				<div>
+					<p>Personal projects are one of the<br/>
+					keys to becoming a better version<br/>
+					of yourself</p><br/>
+				</div>
+				<div className="sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl"><p>{`{ 💻 }`}</p></div>
+				<div className="sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl"><p>{`{ 📚 }`}</p></div>
+				<div className="sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl"><p>{`{ 💡 }`}</p></div>
+			</div>
+		  </div>
 		  <div className="text-xl">TODO - Experience && skills section</div>
 		  <div className="text-xl">TODO - Education section</div>
 		  <div className="text-xl">TODO - Portfolio section</div>
