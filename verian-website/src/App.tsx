@@ -1,5 +1,6 @@
 import './App.css'
 import PostList from './components/PostList';
+import GeneralThingsGrid from './components/GeneralThingsGrid';
 
 function App() {
 	return (
@@ -50,28 +51,7 @@ function App() {
 			<div className="px-4 font-bold text-gray-300">
 				Some general things about me 🪐
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-3 justify-center text-center py-4 px-4 items-center
-				font-bold text-gray-300 text-sm gap-4 md:gap-6">
-				<div>
-					<p>Software engineer with experience in<br/>
-					development, DevOps and site<br/>
-					reliability engineering. Always looking forward<br/>
-					to new challenges</p>
-				</div>
-				<div>
-					<p>Computer Science and<br/>
-					Engineering student, lifelong<br/>
-					learner</p><br/>
-				</div>
-				<div>
-					<p>Personal projects are one of the<br/>
-					keys to becoming a better version<br/>
-					of yourself</p><br/>
-				</div>
-				<div className="sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl"><p>{`{ 💻 }`}</p></div>
-				<div className="sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl"><p>{`{ 📚 }`}</p></div>
-				<div className="sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl"><p>{`{ 💡 }`}</p></div>
-			</div>
+			<GeneralThingsGrid />
 		  </div>
 		  <div className="text-xl">TODO - Experience && skills section</div>
 		  <div className="text-xl">TODO - Education section</div>
