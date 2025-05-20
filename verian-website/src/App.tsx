@@ -1,6 +1,7 @@
 import './App.css'
 import PostList from './components/PostList';
 import GeneralThingsGrid from './components/GeneralThingsGrid';
+import ExperienceAndSkills from './components/ExperienceAndSkills';
 
 function App() {
 	return (
@@ -53,7 +54,9 @@ function App() {
 			</div>
 			<GeneralThingsGrid />
 		  </div>
-		  <div className="text-xl">TODO - Experience && skills section</div>
+		  <div className="text-xl">
+		  	<ExperienceAndSkills />
+		  </div>
 		  <div className="text-xl">TODO - Education section</div>
 		  <div className="text-xl">TODO - Portfolio section</div>
 		  <div className="text-xl">TODO - Contact section</div>
