@@ -1,7 +1,9 @@
 import './App.css'
-import PostList from './components/PostList';
 import GeneralThingsGrid from './components/GeneralThingsGrid';
 import ExperienceAndSkills from './components/ExperienceAndSkills';
+import Education from './components/Education';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 function App() {
 	return (
@@ -57,9 +59,15 @@ function App() {
 		  <div className="text-xl">
 		  	<ExperienceAndSkills />
 		  </div>
-		  <div className="text-xl">TODO - Education section</div>
-		  <div className="text-xl">TODO - Portfolio section</div>
-		  <div className="text-xl">TODO - Contact section</div>
+		  <div className="text-xl">
+			<Education />
+		  </div>
+		  <div className="text-xl">
+			<Portfolio />
+		  </div>
+		  <div className="text-xl">
+			<Contact />
+		  </div>
 		</main>
 	  </div>
 	);
