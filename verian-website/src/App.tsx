@@ -51,7 +51,7 @@ function App() {
 			</div>
 		  </div>
 		  <div className="text-xl py-8">
-			<div className="px-4 font-bold text-gray-300">
+			<div className="px-4 font-bold text-gray-100">
 				Some general things about me 🪐
 			</div>
 			<GeneralThingsGrid />
@@ -60,9 +60,17 @@ function App() {
 		  	<ExperienceAndSkills />
 		  </div>
 		  <div className="text-xl">
+			<br/>
+			<div className="px-4 font-bold text-gray-100">
+				Education plays a key part in my life 📖
+			</div>
 			<Education />
 		  </div>
 		  <div className="text-xl">
+		  	<br/>
+			<div className="px-4 font-bold text-gray-100">
+				Check out some of my projects 📌
+			</div>
 			<Portfolio />
 		  </div>
 		  <div className="text-xl">
