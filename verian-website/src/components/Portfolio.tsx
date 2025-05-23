@@ -1,7 +1,16 @@
-function TechStack({ technologies }) {
+interface Technology {
+	name: string;
+	icon: string;
+}
+
+interface TechStackProps {
+	technologies: Technology[];
+}
+
+function TechStack({ technologies }: TechStackProps) {
 	return (
 		<div className="flex justify-center gap-2 px-2">
-			{technologies.slice(0, 4).map((tech, index) => (
+			{technologies.slice(0, 4).map((tech: Technology, index: number) => (
 				<img
 					key={index}
 					src={tech.icon}

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function GeneralThingsGrid() {
   // State to track which column is being hovered
-  const [hoveredColumn, setHoveredColumn] = useState(null);
+  const [hoveredColumn, setHoveredColumn] = useState<number | null>(null);
   
   // Content for the grid
   const gridContent = [
