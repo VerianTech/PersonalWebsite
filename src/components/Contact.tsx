@@ -13,8 +13,16 @@ export default function Contact() {
 						src="./src/assets/social/linkedin.png"
 						alt="logo"
 						className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto mx-autor col-span-3" />
-					<div className="flex items-center justify-center col-span-7">
-						linkedin.com/in/dorian-verna
+					<div
+						className="flex items-center justify-center col-span-7">
+						<a 
+							href="https://linkedin.com/in/dorian-verna"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="hover:underline"
+							>
+							linkedin.com/in/dorian-verna
+						</a>
 					</div>
 				</div>
 				<div className="grid grid-cols-10 place-items-center text-center">
@@ -23,7 +31,14 @@ export default function Contact() {
 						alt="logo"
 						className="h-2 sm:h-4 md:h-6 lg:h-8 w-auto mx-autor col-span-3" />
 					<div className="flex items-center justify-center col-span-7">
-						dorianverna7@gmail.com
+						<a 
+							href="mailto:dorianverna7@gmail.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="hover:underline"
+							>
+							dorianverna7@gmail.com
+						</a>
 					</div>
 				</div>
 				<div className="grid grid-cols-10 place-items-center text-center">
@@ -32,7 +47,14 @@ export default function Contact() {
 						alt="logo"
 						className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-autor col-span-3" />
 					<div className="flex items-center justify-center col-span-7">
-						github.com/dorianverna17
+						<a 
+							href="https://github.com/dorianverna17"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="hover:underline"
+							>
+							github.com/dorianverna17
+						</a>
 					</div>
 				</div>
 				<div className="grid grid-cols-10 place-items-center text-center">
@@ -41,7 +63,14 @@ export default function Contact() {
 						alt="logo"
 						className="h-4 sm:h-6 md:h-8 lg:h-10 w-auto mx-autor col-span-3" />
 					<div className="flex items-center justify-center col-span-7">
-						instagram.com/dorian17v
+						<a 
+							href="https://instagram.com/dorian17v"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="hover:underline"
+							>
+							instagram.com/dorian17v
+						</a>
 					</div>
 				</div>
 				<div className="grid grid-cols-10 place-items-center text-center">
@@ -50,7 +79,14 @@ export default function Contact() {
 						alt="logo"
 						className="h-4 sm:h-6 md:h-8 lg:h-10 w-auto mx-autor col-span-3" />
 					<div className="flex items-center justify-center col-span-7">
-						x.com/dorian17v
+						<a 
+							href="https://x.com/dorian17v"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="hover:underline"
+							>
+							x.com/dorian17v
+						</a>
 					</div>
 				</div>
 			</div>
