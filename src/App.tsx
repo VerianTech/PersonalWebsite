@@ -5,6 +5,8 @@ import Education from './components/Education';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
+import { scrollToSection } from './utils/logic';
+
 function App() {
 	return (
 	  <div className="min-h-screen text-black"
@@ -24,11 +26,16 @@ function App() {
 
 		  {/* Horizontal Menu Items */}
 		  <ul className="flex text-lg space-x-8 sm:space-x-12 md:space-x-16 font-bold font-roboto">
-			<li className="hover:text-gray-300 cursor-pointer">About Me</li>
-			<li className="hover:text-gray-300 cursor-pointer">Experience</li>
-			<li className="hover:text-gray-300 cursor-pointer">Education</li>
-			<li className="hover:text-gray-300 cursor-pointer">Portfolio</li>
-			<li className="hover:text-gray-300 cursor-pointer">Contact</li>
+			<li onClick={() => scrollToSection("about-me")}
+				className="hover:text-gray-300 cursor-pointer">About Me</li>
+			<li onClick={() => scrollToSection("experience")}
+				className="hover:text-gray-300 cursor-pointer">Experience</li>
+			<li onClick={() => scrollToSection("education")}
+				className="hover:text-gray-300 cursor-pointer">Education</li>
+			<li onClick={() => scrollToSection("portfolio")}
+				className="hover:text-gray-300 cursor-pointer">Portfolio</li>
+			<li onClick={() => scrollToSection("contact")}
+				className="hover:text-gray-300 cursor-pointer">Contact</li>
 		  </ul>
 		</nav>
   
@@ -42,7 +49,8 @@ function App() {
 					alt="image"
 					className="w-full h-full object-cover aspect-square"/>
 			</div>
-			<div className="text-center md:text-left font-bold text-gray-300">
+			<div
+				className="text-center md:text-left font-bold text-gray-300">
 				Hello there 👋🏻
 				<br/><br/>
 				I’m Dorian, computer science enthusiast and software engineer
@@ -50,30 +58,40 @@ function App() {
 				I work on building high scalable systems, below you can find my personal portfolio as well as my CV
 			</div>
 		  </div>
-		  <div className="text-xl py-8">
+		  <div
+		  	id="about-me"
+		  	className="text-xl py-8">
 			<div className="px-4 font-bold text-gray-100">
 				Some general things about me 🪐
 			</div>
 			<GeneralThingsGrid />
 		  </div>
-		  <div className="text-xl">
+		  <div
+		  	id="experience"
+		  	className="text-xl">
 		  	<ExperienceAndSkills />
 		  </div>
-		  <div className="text-xl">
+		  <div
+		  	id="education"
+		  	className="text-xl">
 			<br/>
 			<div className="px-4 font-bold text-gray-100">
 				Education plays a key part in my life 📖
 			</div>
 			<Education />
 		  </div>
-		  <div className="text-xl">
+		  <div
+		  	id="portfolio"
+		  	className="text-xl">
 		  	<br/>
 			<div className="px-4 font-bold text-gray-100">
 				Check out some of my projects 📌
 			</div>
 			<Portfolio />
 		  </div>
-		  <div className="text-xl">
+		  <div
+		  	id="contact"
+		  	className="text-xl">
 			<Contact />
 		  </div>
 		</main>
