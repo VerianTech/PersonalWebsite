@@ -25,7 +25,7 @@ export default function ExperienceAndSkills() {
 					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
 				<div className="flex items-center justify-center col-span-7">
 					Software Engineer @ Hella<br/>
-					Sept. 2024 - Present
+					October 2023 - Sept. 2024
 				</div>
 			</div>
 			<div className="grid grid-cols-10 place-items-center text-center">
@@ -35,7 +35,7 @@ export default function ExperienceAndSkills() {
 					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
 				<div className="flex items-center justify-center col-span-7">
 					Site Reliability Engineer Intern @ Google<br/>
-					Sept. 2024 - Present
+					July 2023 - October 2023
 				</div>
 			</div>
 			<div className="grid grid-cols-10 place-items-center text-center">
@@ -45,7 +45,7 @@ export default function ExperienceAndSkills() {
 					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
 				<div className="flex items-center justify-center col-span-7">
 					DevOps Engineer @ Thales<br/>
-					Sept. 2024 - Present
+					October 2022 - July 2023
 				</div>
 			</div>
 			<div className="grid grid-cols-10 place-items-center text-center">
@@ -55,7 +55,7 @@ export default function ExperienceAndSkills() {
 					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
 				<div className="flex items-center justify-center col-span-7">
 					Software Engineer Intern @ Google<br/>
-					Sept. 2024 - Present
+					July 2022 - October 2022
 				</div>
 			</div>
 			<div className="grid grid-cols-10 place-items-center text-center">
@@ -65,7 +65,7 @@ export default function ExperienceAndSkills() {
 					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
 				<div className="flex items-center justify-center col-span-7">
 					Test Developer Intern @ NXP<br/>
-					Sept. 2024 - Present
+					June 2021 - July 2022
 				</div>
 			</div>
 		</div>
