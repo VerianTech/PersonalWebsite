@@ -23,10 +23,16 @@ function TechStack({ technologies }: TechStackProps) {
 	);
 }
 
-function ViewDetails() {
+function ViewDetails({ link }: { link: string }) {
+	const handleClick = () => {
+		window.open(link, '_blank', 'noopener,noreferrer');
+	};
+
 	return (
-		<button className="bg-white/20 hover:bg-white/30 text-white px-4 py-2
-			rounded-md transition-colors duration-200 w-fit mx-auto"
+		<button
+			onClick={handleClick}
+			className="bg-white/20 hover:bg-white/30 text-white px-4 py-2
+				rounded-md transition-colors duration-200 w-fit mx-auto"
 		>View Details</button>
 	)
 }
@@ -34,7 +40,7 @@ function ViewDetails() {
 export default function Portfolio() {
 	const projectTechStacks = [
 		[
-			{ name: 'Kotlin', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
+			{ name: 'Kotlin',icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
 			{ name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
 			{ name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
 			{ name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' }
@@ -48,6 +54,12 @@ export default function Portfolio() {
 			{ name: 'Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' }
 		]
 	];
+
+	const projectLinks = [
+		"https://github.com/Players-Needed/Players-Needed-Android-App",
+		"https://github.com/dorianverna17/Map_Reduce_Model",
+		"https://github.com/dorianverna17/Mini-Preprocessor",
+	]
 
 	return (
 		<div className="justify-center text-center py-4 px-14 items-center
@@ -65,12 +77,14 @@ export default function Portfolio() {
 						src="./src/assets/projects/players_needed.png"
 						alt="logo"
 						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+						Players Needed<br/>
+						-Bachelors thesis-
 					</div>
 					<p className="px-2">
 					App designed to let people organize sports events easily
 					</p>
 					<TechStack technologies={projectTechStacks[0]} />
-					<ViewDetails />
+					<ViewDetails link={projectLinks[0]}/>
 				</div>
 				<div className="grid grid-cols-1 py-4 rounded-lg gap-y-2 h-full"
 					style={{
@@ -82,12 +96,13 @@ export default function Portfolio() {
 						src="./src/assets/projects/map_reduce.png"
 						alt="logo"
 						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+						Map Reduce Implementation
 					</div>
 					<p className="px-2">
 					Tool that analyzes and stores words from text files using the MapReduce paradigm
 					</p>
 					<TechStack technologies={projectTechStacks[1]} />
-					<ViewDetails />
+					<ViewDetails link={projectLinks[1]}/>
 				</div>
 				<div className="grid grid-cols-1 py-4 rounded-lg gap-y-2 h-full"
 					style={{
@@ -99,12 +114,13 @@ export default function Portfolio() {
 						src="./src/assets/projects/minipreprocessor.png"
 						alt="logo"
 						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+						Minipreprocessor Implementation
 					</div>
 					<p className="px-2">
 					Program that analyzes C code files, and solves the basic directives/macros present
 					</p>
 					<TechStack technologies={projectTechStacks[2]} />
-					<ViewDetails />
+					<ViewDetails link={projectLinks[2]}/>
 				</div>
 			</div>
 		</div>
