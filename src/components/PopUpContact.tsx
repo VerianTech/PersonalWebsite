@@ -8,7 +8,7 @@ export default function PopupFormExample() {
     message: ''
   });
 
-  const handleInputChange = (e: string) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
