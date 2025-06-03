@@ -1,4 +1,10 @@
+import { useState } from 'react';
+import PopUpContact from './PopUpContact';
+
+
 export default function Contact() {
+	const [popup, togglepopup] = useState(false);
+	
 	return (
 		<div className="grid grid-cols-2 justify-center text-center py-4 px-4 items-center
 		font-bold text-gray-300 text-sm gap-4 md:gap-6"
@@ -93,9 +99,17 @@ export default function Contact() {
 		</div>
 		<div className="text-2xl md:text-3xl lg:text-4xl font-bold text-center py-8 text-white 
 			rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300
-			animate-pulse hover:animate-none cursor-pointer">
+			animate-pulse hover:animate-none cursor-pointer"
+			onClick={() => togglepopup(!popup)}
+			>
 			Let's get in touch!
 		</div>
+		{popup && (
+			<PopUpContact 
+				onClose={() => togglepopup(false)}
+				isOpen={popup}
+			/>
+		)}
 	</div>
 	)
 }
