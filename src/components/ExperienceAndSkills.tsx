@@ -1,8 +1,7 @@
 export default function ExperienceAndSkills() {
   return (
-	<div className="grid grid-cols-1 grid-cols-2 justify-center text-center py-4 px-4 items-center
+	<div className="grid grid-cols-1 grid-cols-2 justify-center text-center py-4 px-4 items-stretch
 		font-bold text-gray-300 text-sm gap-4 md:gap-6">
-	  <div className="h-full">
 		<div className="grid grid-cols-1 justify-center gap-y-4 py-4 px-2 rounded-lg"
 			style={{
 				backgroundImage: "linear-gradient(#8aa0a7,#176b87)",
@@ -69,52 +68,64 @@ export default function ExperienceAndSkills() {
 				</div>
 			</div>
 		</div>
-	  </div>
-	  <div className="h-full">
-        <div className="flex flex-col justify-start gap-4 py-4 px-2 rounded-lg h-full"
-          style={{
-            backgroundImage: "linear-gradient(#204D58,#46A6BE)",
-          }}
-        >
-          <div className="text-l md:text-xl lg:text-2xl font-bold text-center mb-2">
-            Tech Stack 🚀
-          </div>
-          <div className="grid grid-cols-3 place-items-center gap-8 md:gap-y-12 pt-2">
-            <img
-              src="./src/assets/tech_stack/java.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-            <img
-              src="./src/assets/tech_stack/cpp.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-            <img
-              src="./src/assets/tech_stack/go.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-            <img
-              src="./src/assets/tech_stack/c.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-            <img
-              src="./src/assets/tech_stack/python.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-            <img
-              src="./src/assets/tech_stack/kotlin.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-            <img
-              src="./src/assets/tech_stack/html.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-            <img
-              src="./src/assets/tech_stack/css.png"
-              alt="logo"
-              className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-          </div>
-        </div>
-	  </div>
+		<TechStack />
 	</div>
   );
 }
+
+const TechStack = () => {
+	return (
+	  	<div>
+			<div className="flex flex-col justify-start gap-4 py-4 px-2 rounded-lg h-full"
+			style={{
+				backgroundImage: "linear-gradient(#204D58,#46A6BE)",
+			}}
+			>
+			<div className="text-l md:text-xl lg:text-2xl font-bold text-center mb-2">
+				Tech Stack 🚀
+			</div>
+			<div className="grid grid-cols-3 place-items-center gap-8 md:gap-y-12 pt-2">
+				<img
+				src="./src/assets/tech_stack/java.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+				<img
+				src="./src/assets/tech_stack/cpp.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+				<img
+				src="./src/assets/tech_stack/go.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+				<img
+				src="./src/assets/tech_stack/c.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+				<img
+				src="./src/assets/tech_stack/python.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+				<img
+				src="./src/assets/tech_stack/kotlin.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+				<img
+				src="./src/assets/tech_stack/html.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+				<img
+				src="./src/assets/tech_stack/css.png"
+				alt="logo"
+				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
+			</div>
+			<div className="text-l md:text-xl lg:text-2xl font-bold text-right mb-2">
+				<img
+					src="./src/assets/arrow.png"
+					alt="logo"
+					className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto ml-auto" />
+			</div>
+			</div>
+			<div className="text-l md:text-xl lg:text-2xl font-bold text-center mb-2"></div>
+		</div>
+	);
+};
