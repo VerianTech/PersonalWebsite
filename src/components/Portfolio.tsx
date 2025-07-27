@@ -52,18 +52,68 @@ export default function Portfolio() {
 		[
 			{ name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
 			{ name: 'Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' }
-		]
+		],
+		[
+			{ name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+			{ name: 'Flower', icon: './src/assets/tech_stack/flower-logo.png' },
+		],
+		[
+			{ name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
+			{ name: 'Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' }
+		],
+		[
+			{ name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
+			{ name: 'Arduino', icon: './src/assets/tech_stack/arduino_Logo.png' }
+		],
+		[
+			{ name: 'Assembly x86', icon: './src/assets/tech_stack/x86.png' },
+			{ name: 'Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' }
+		],
+		[
+			{ name: 'Matlab', icon: './src/assets/tech_stack/Matlab_Logo.png' },
+		],
 	];
 
 	const projectLinks = [
 		"https://github.com/Players-Needed/Players-Needed-Android-App",
 		"https://github.com/dorianverna17/Map_Reduce_Model",
 		"https://github.com/dorianverna17/Mini-Preprocessor",
+		"https://github.com/dorianverna17/FLSEHM",
+		"https://github.com/dorianverna17/TSP_Genetic",
+		"https://github.com/dorianverna17/Tetris",
+		"https://github.com/dorianverna17/Abstract_Syntax_Tree",
+		"https://github.com/dorianverna17/PageRank",
 	]
 
+	let startIndex = 0
+	let elementsToDisplay = 3
+
+	let ShiftProjectsLeft= () => {
+		if (startIndex != 0) {
+			startIndex -= 1
+		} else {
+			startIndex = 7
+		}
+	}
+
+	let ShiftProjectsRight= () => {
+		if (startIndex != 7) {
+			startIndex += 1
+		} else {
+			startIndex = 0
+		}
+	}
+
 	return (
-		<div className="justify-center text-center py-4 px-14 items-center
+		<div className="grid grid-cols-[1fr_16fr_1fr] justify-center text-center py-4 px-10 items-center
 		font-bold text-gray-300 text-sm gap-4 md:gap-6">
+			<div className="cursor-pointer" onClick={ShiftProjectsLeft}>
+				<img
+					src="./src/assets/arrow.png"
+					alt="logo"
+					className="h-12 sm:h-16 md:h-20 lg:h-22
+						hover:grayscale hover:brightness-75 scale-x-[-1]"  />
+			</div>
 			<div className="grid grid-cols-3 justify-center text-center px-4 items-center
 				font-bold text-gray-100 text-sm gap-4 md:gap-6 rounded-lg"
 			>
@@ -122,6 +172,13 @@ export default function Portfolio() {
 					<TechStack technologies={projectTechStacks[2]} />
 					<ViewDetails link={projectLinks[2]}/>
 				</div>
+			</div>
+			<div className="cursor-pointer" onClick={ShiftProjectsRight}>
+				<img
+					src="./src/assets/arrow.png"
+					alt="logo"
+					className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto ml-auto 
+						hover:grayscale hover:brightness-75"  />
 			</div>
 		</div>
 	)

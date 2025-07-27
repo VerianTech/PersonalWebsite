@@ -129,14 +129,14 @@ const TechStack = ({ onDivClick }: { onDivClick: () => void }) => {
 				alt="logo"
 				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
 			</div>
-			<div className="text-l md:text-xl lg:text-2xl font-bold text-right mb-2 cursor-pointer"
-				onClick={onDivClick}>
-				<img
-					src="./src/assets/arrow.png"
-					alt="logo"
-					className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto ml-auto 
-             			hover:grayscale hover:brightness-75"  />
-			</div>
+				<div className="text-l md:text-xl lg:text-2xl font-bold text-right mb-2 cursor-pointer"
+					onClick={onDivClick}>
+					<img
+						src="./src/assets/arrow.png"
+						alt="logo"
+						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto ml-auto 
+							hover:grayscale hover:brightness-75"  />
+				</div>
 			</div>
 			<div className="text-l md:text-xl lg:text-2xl font-bold text-center mb-2"></div>
 		</div>
@@ -192,14 +192,14 @@ const ToolsStack = ({ onDivClick }: { onDivClick: () => void }) => {
 				alt="logo"
 				className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
 			</div>
-			<div className="text-l md:text-xl lg:text-2xl font-bold text-right mb-2 cursor-pointer"
-				onClick={onDivClick}>
-				<img
-					src="./src/assets/arrow.png"
-					alt="logo"
-					className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto ml-auto 
-             			hover:grayscale hover:brightness-75 scale-x-[-1]"  />
-			</div>
+				<div className="text-l md:text-xl lg:text-2xl font-bold text-right mb-2 cursor-pointer"
+					onClick={onDivClick}>
+					<img
+						src="./src/assets/arrow.png"
+						alt="logo"
+						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto ml-auto 
+							hover:grayscale hover:brightness-75 scale-x-[-1]"  />
+				</div>
 			</div>
 			<div className="text-l md:text-xl lg:text-2xl font-bold text-center mb-2"></div>
 		</div>
