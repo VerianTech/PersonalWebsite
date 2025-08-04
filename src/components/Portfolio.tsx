@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 interface Technology {
 	name: string;
 	icon: string;
@@ -38,6 +40,10 @@ function ViewDetails({ link }: { link: string }) {
 }
 
 export default function Portfolio() {
+	const [startIndex, setStartIndex] = useState(0);
+	const [isTransitioning, setIsTransitioning] = useState(false);
+	const elementsToDisplay = 3;
+
 	const projectTechStacks = [
 		[
 			{ name: 'Kotlin',icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
@@ -83,100 +89,124 @@ export default function Portfolio() {
 		"https://github.com/dorianverna17/Tetris",
 		"https://github.com/dorianverna17/Abstract_Syntax_Tree",
 		"https://github.com/dorianverna17/PageRank",
-	]
+	];
 
-	let startIndex = 0
-	let elementsToDisplay = 3
+	const projectNames = [
+		"Players Needed\n-Bachelors thesis-",
+		"Map Reduce Implementation",
+		"Minipreprocessor Implementation",
+		"FLSEHM",
+		"TSP Genetic",
+		"Tetris",
+		"Abstract Syntax Tree",
+		"PageRank"
+	];
 
-	let ShiftProjectsLeft= () => {
-		if (startIndex != 0) {
-			startIndex -= 1
-		} else {
-			startIndex = 7
+	const projectDescriptions = [
+		"App designed to let people organize sports events easily",
+		"Tool that analyzes and stores words from text files using the MapReduce paradigm",
+		"Program that analyzes C code files, and solves the basic directives/macros present",
+		"Federated Learning System for Environmental Health Monitoring",
+		"Traveling Salesman Problem solver using genetic algorithms",
+		"Classic Tetris game implementation",
+		"Abstract Syntax Tree parser and analyzer",
+		"PageRank algorithm implementation"
+	];
+
+	const projectImages = [
+		"./src/assets/projects/players_needed.png",
+		"./src/assets/projects/map_reduce.png",
+		"./src/assets/projects/minipreprocessor.png",
+		"./src/assets/projects/flsehm.png",
+		"./src/assets/projects/tsp.png",
+		"./src/assets/projects/tetris.png",
+		"./src/assets/projects/ast.png",
+		"./src/assets/projects/pagerank.png"
+	];
+
+	const shiftProjectsLeft = () => {
+		if (isTransitioning) return;
+		setIsTransitioning(true);
+		setTimeout(() => {
+			setStartIndex(prev => prev === 0 ? projectTechStacks.length - 1 : prev - 1);
+			setIsTransitioning(false);
+		}, 150);
+	};
+
+	const shiftProjectsRight = () => {
+		if (isTransitioning) return;
+		setIsTransitioning(true);
+		setTimeout(() => {
+			setStartIndex(prev => prev === projectTechStacks.length - 1 ? 0 : prev + 1);
+			setIsTransitioning(false);
+		}, 150);
+	};
+
+	// Get the current 3 projects to display
+	const getCurrentProjects = () => {
+		const projects = [];
+		for (let i = 0; i < elementsToDisplay; i++) {
+			const index = (startIndex + i) % projectTechStacks.length;
+			projects.push({
+				techStack: projectTechStacks[index],
+				link: projectLinks[index],
+				name: projectNames[index],
+				description: projectDescriptions[index],
+				image: projectImages[index]
+			});
 		}
-	}
+		return projects;
+	};
 
-	let ShiftProjectsRight= () => {
-		if (startIndex != 7) {
-			startIndex += 1
-		} else {
-			startIndex = 0
-		}
-	}
+	const currentProjects = getCurrentProjects();
 
 	return (
 		<div className="grid grid-cols-[1fr_16fr_1fr] justify-center text-center py-4 px-10 items-center
 		font-bold text-gray-300 text-sm gap-4 md:gap-6">
-			<div className="cursor-pointer" onClick={ShiftProjectsLeft}>
+			<div className={`cursor-pointer transition-transform duration-200 hover:scale-110 
+				${isTransitioning ? 'pointer-events-none opacity-50' : ''}`} 
+				onClick={shiftProjectsLeft}>
 				<img
 					src="./src/assets/arrow.png"
-					alt="logo"
+					alt="Previous projects"
 					className="h-12 sm:h-16 md:h-20 lg:h-22
 						hover:grayscale hover:brightness-75 scale-x-[-1]"  />
 			</div>
-			<div className="grid grid-cols-3 justify-center text-center px-4 items-center
-				font-bold text-gray-100 text-sm gap-4 md:gap-6 rounded-lg"
+			<div className={`grid grid-cols-3 justify-center text-center px-4 items-center
+				font-bold text-gray-100 text-sm gap-4 md:gap-6 rounded-lg transition-all duration-300 ease-in-out
+				${isTransitioning ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}
 			>
-				<div className="grid grid-cols-1 py-4 rounded-lg gap-y-2 h-full"
-					style={{
-						backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
-					}}
-				>
-					<div className="grid grid-cols-2">
-						<img
-						src="./src/assets/projects/players_needed.png"
-						alt="logo"
-						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-						Players Needed<br/>
-						-Bachelors thesis-
+				{currentProjects.map((project, index) => (
+					<div key={`${startIndex}-${index}`} 
+						className={`grid grid-cols-1 py-4 rounded-lg gap-y-2 h-full
+						transition-all duration-300 ease-in-out transform
+						${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
+						style={{
+							backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
+							transitionDelay: `${index * 50}ms`
+						}}
+					>
+						<div className="grid grid-cols-2">
+							<img
+								src={project.image}
+								alt="Project logo"
+								className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto rounded-lg" />
+							{project.name}
+						</div>
+						<p className="px-2">
+							{project.description}
+						</p>
+						<TechStack technologies={project.techStack} />
+						<ViewDetails link={project.link}/>
 					</div>
-					<p className="px-2">
-					App designed to let people organize sports events easily
-					</p>
-					<TechStack technologies={projectTechStacks[0]} />
-					<ViewDetails link={projectLinks[0]}/>
-				</div>
-				<div className="grid grid-cols-1 py-4 rounded-lg gap-y-2 h-full"
-					style={{
-						backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
-					}}
-				>
-					<div className="grid grid-cols-2">
-						<img
-						src="./src/assets/projects/map_reduce.png"
-						alt="logo"
-						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-						Map Reduce Implementation
-					</div>
-					<p className="px-2">
-					Tool that analyzes and stores words from text files using the MapReduce paradigm
-					</p>
-					<TechStack technologies={projectTechStacks[1]} />
-					<ViewDetails link={projectLinks[1]}/>
-				</div>
-				<div className="grid grid-cols-1 py-4 rounded-lg gap-y-2 h-full"
-					style={{
-						backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
-					}}
-				>
-					<div className="grid grid-cols-2">
-						<img
-						src="./src/assets/projects/minipreprocessor.png"
-						alt="logo"
-						className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto" />
-						Minipreprocessor Implementation
-					</div>
-					<p className="px-2">
-					Program that analyzes C code files, and solves the basic directives/macros present
-					</p>
-					<TechStack technologies={projectTechStacks[2]} />
-					<ViewDetails link={projectLinks[2]}/>
-				</div>
+				))}
 			</div>
-			<div className="cursor-pointer" onClick={ShiftProjectsRight}>
+			<div className={`cursor-pointer transition-transform duration-200 hover:scale-110 
+				${isTransitioning ? 'pointer-events-none opacity-50' : ''}`} 
+				onClick={shiftProjectsRight}>
 				<img
 					src="./src/assets/arrow.png"
-					alt="logo"
+					alt="Next projects"
 					className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto ml-auto 
 						hover:grayscale hover:brightness-75"  />
 			</div>

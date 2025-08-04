@@ -11,17 +11,17 @@ export default function GeneralThingsGrid() {
     {
 	  name: "experience",
       text: "Software engineer with experience in development, DevOps and site reliability engineering. Always looking forward to new challenges",
-      emoji: "💻"
+      emoji: "{ 💻 }"
     },
     {
 	  name: "education",
       text: "Computer Science and Engineering student, lifelong learner",
-      emoji: "📚"
+      emoji: "{ 📚 }"
     },
     {
 	  name: "portfolio",
       text: "Personal projects are one of the keys to becoming a better version of yourself",
-      emoji: "💡"
+      emoji: "{ 💡 }"
     }
   ];
   
@@ -33,7 +33,7 @@ export default function GeneralThingsGrid() {
           {/* Text div with hover effect */}
           <div 
             key={`text-${index}`}
-            className={`transition-colors duration-300 ${hoveredColumn === index ? 'text-gray-600' : 'text-gray-300'}`}
+            className={`transition-colors duration-300 ${hoveredColumn === index ? 'text-gray-400 cursor-pointer' : 'text-gray-300'}`}
             onMouseEnter={() => setHoveredColumn(index)}
             onMouseLeave={() => setHoveredColumn(null)}
 			onClick={() => {
@@ -55,7 +55,7 @@ export default function GeneralThingsGrid() {
       {gridContent.map((item, index) => (
         <div 
           key={`emoji-${index}`}
-          className={`sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl ${hoveredColumn === index ? 'text-gray-600' : 'text-gray-300'}`}
+          className={`sm:text-xl md:text-5xl lg:text-7xl xl:text-9xl ${hoveredColumn === index ? 'text-gray-400 cursor-pointer' : 'text-gray-300'}`}
           onMouseEnter={() => setHoveredColumn(index)}
           onMouseLeave={() => setHoveredColumn(null)}
 		  onClick={() => {
@@ -68,7 +68,7 @@ export default function GeneralThingsGrid() {
 			}
 		  }}
         >
-          <p>{`{ ${item.emoji} }`}</p>
+          <p>{`${item.emoji}`}</p>
         </div>
       ))}
     </div>
