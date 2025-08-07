@@ -115,26 +115,27 @@ function App() {
 		{/* Main content */}
 		<main>
 		  {/* Hero Section */}
-		  <div className="flex flex-col md:flex-row justify-between py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 items-center text-base sm:text-lg md:text-xl gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-			<div className="rounded-full overflow-hidden shadow-md
-				w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-54 lg:h-54 xl:w-60 xl:h-60 flex-shrink-0">
-				<img
-					src="./src/assets/me_round.png"
-					alt="image"
-					className="w-full h-full object-cover aspect-square"/>
-			</div>
-			<div className="text-center md:text-left font-bold text-gray-300 max-w-none md:max-w-lg lg:max-w-xl">
-				<span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Hello there 👋🏻</span>
-				<br/><br/>
-				<span className="text-sm sm:text-base md:text-lg lg:text-xl">
-					I'm Dorian, computer science enthusiast and software engineer
-				</span>
-				<br/><br/>
-				<span className="text-xs sm:text-sm md:text-base lg:text-lg">
-					I work on building high scalable systems, below you can find my personal portfolio as well as my CV
-				</span>
-			</div>
-		  </div>
+		  <div className="flex flex-col md:flex-row py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-10 items-center justify-center
+		  	text-base sm:text-lg md:text-xl gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+            <div className="rounded-full overflow-hidden shadow-md
+                w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-54 lg:h-54 xl:w-60 xl:h-60">
+                <img
+                    src="./src/assets/me_round.png"
+                    alt="image"
+                    className="w-full h-full object-cover aspect-square"/>
+            </div>
+            <div className="text-center md:text-left font-bold text-gray-300 max-w-none md:max-w-lg lg:max-w-xl">
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl">Hello there 👋🏻</span>
+                <br/><br/>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl">
+                    I'm Dorian, computer science enthusiast and software engineer
+                </span>
+                <br/><br/>
+                <span className="text-xs sm:text-sm md:text-base lg:text-lg">
+                    I work on building high scalable systems, below you can find my personal portfolio as well as my CV
+                </span>
+            </div>
+          </div>
 
 		  {/* About Me Section */}
 		  <div
