@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface Technology {
 	name: string;
@@ -42,7 +42,33 @@ function ViewDetails({ link }: { link: string }) {
 export default function Portfolio() {
 	const [startIndex, setStartIndex] = useState(0);
 	const [isTransitioning, setIsTransitioning] = useState(false);
-	const elementsToDisplay = 3;
+	
+	const [elementsToDisplay, setElementsToDisplay] = useState(3);
+
+	useEffect(() => {
+		function handleResize() {
+			if (window.innerWidth < 768) {
+				setElementsToDisplay(1); // mobile
+			} else if (window.innerWidth < 1024) {
+				setElementsToDisplay(2); // sm
+			} else if (window.innerWidth < 1280) {
+				setElementsToDisplay(3); // md
+			} else if (window.innerWidth < 1536) {
+				setElementsToDisplay(4); // lg
+			} else if (window.innerWidth < 1920) {
+				setElementsToDisplay(5); // xl
+			} else {
+				setElementsToDisplay(6); // 2xl+
+			}
+		}
+
+		// Run it once on mount
+		handleResize();
+
+		// Add listener
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
 	const projectTechStacks = [
 		[
@@ -69,7 +95,7 @@ export default function Portfolio() {
 		],
 		[
 			{ name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
-			{ name: 'Arduino', icon: './src/assets/tech_stack/arduino_Logo.png' }
+			{ name: 'Arduino', icon: './src/assets/tech_stack/arduino_Logo.svg' }
 		],
 		[
 			{ name: 'Assembly x86', icon: './src/assets/tech_stack/x86.png' },
@@ -92,9 +118,9 @@ export default function Portfolio() {
 	];
 
 	const projectNames = [
-		"Players Needed\n-Bachelors thesis-",
+		<>Players Needed<br />-Bachelors thesis-</>,
 		"Map Reduce Implementation",
-		"Minipreprocessor Implementation",
+		"Preprocessor Implementation",
 		"FLSEHM",
 		"TSP Genetic",
 		"Tetris",
@@ -172,14 +198,16 @@ export default function Portfolio() {
 					className="h-12 sm:h-16 md:h-20 lg:h-22
 						hover:grayscale hover:brightness-75 scale-x-[-1]"  />
 			</div>
-			<div className={`grid grid-cols-3 justify-center text-center px-4 items-center
-				font-bold text-gray-100 text-sm gap-4 md:gap-6 rounded-lg transition-all duration-300 ease-in-out
+			<div
+				className={`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6
+					justify-center text-center px-4 items-center font-bold text-gray-100 text-sm
+					gap-4 md:gap-6 rounded-lg transition-all duration-300 ease-in-out
 				${isTransitioning ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}
 			>
 				{currentProjects.map((project, index) => (
 					<div key={`${startIndex}-${index}`} 
-						className={`grid grid-cols-1 py-4 rounded-lg gap-y-2 h-full
-						transition-all duration-300 ease-in-out transform
+						className={`grid grid-cols-1 py-4 rounded-lg gap-y-2 
+						h-[20vh] transition-all duration-300 ease-in-out transform
 						${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
 						style={{
 							backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
