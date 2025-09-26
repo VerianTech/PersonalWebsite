@@ -207,7 +207,8 @@ export default function Portfolio() {
 				{currentProjects.map((project, index) => (
 					<div key={`${startIndex}-${index}`} 
 						className={`grid grid-cols-1 py-4 rounded-lg gap-y-2 
-						h-[20vh] transition-all duration-300 ease-in-out transform
+						sm:h-[20vh] md:h-[20vh] lg:h-[20vh] xl:h-[35vh] 2xl:h-[45vh]
+						transition-all duration-300 ease-in-out transform
 						${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
 						style={{
 							backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
@@ -215,18 +216,18 @@ export default function Portfolio() {
 						}}
 					>
 						<div className="grid grid-cols-2">
-							<img
-								src={project.image}
-								alt="Project logo"
-								className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto rounded-lg" />
-							{project.name}
+								<img
+									src={project.image}
+									alt="Project logo"
+									className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto rounded-lg" />
+								{project.name}
+							</div>
+							<p className="px-2">
+								{project.description}
+							</p>
+							<TechStack technologies={project.techStack} />
+							<ViewDetails link={project.link}/>
 						</div>
-						<p className="px-2">
-							{project.description}
-						</p>
-						<TechStack technologies={project.techStack} />
-						<ViewDetails link={project.link}/>
-					</div>
 				))}
 			</div>
 			<div className={`cursor-pointer transition-transform duration-200 hover:scale-110 
