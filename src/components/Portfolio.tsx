@@ -207,7 +207,7 @@ export default function Portfolio() {
 				{currentProjects.map((project, index) => (
 				<div key={`${startIndex}-${index}`} 
 					className={`flex flex-col py-4 px-2 rounded-lg gap-y-3
-					min-h-[180px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px]
+					min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px]
 					transition-all duration-300 ease-in-out transform
 					${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
 					style={{
