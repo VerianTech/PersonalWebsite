@@ -44,11 +44,25 @@ export default function PopUpContact({ onClose, isOpen }: PopUpContactProps) {
 		}
 	
 		try {
-		  // Simulate form submission (replace with your actual submission logic)
-		  await new Promise(resolve => setTimeout(resolve, 1500));
+		  // Send form data to Django backend
+		  const response = await fetch('https://verian.onrender.com/api/contact/', {
+			method: 'POST',
+			headers: {
+			  'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+			  name: formData.name,
+			  email: formData.email,
+			  message: formData.message
+			})
+		  });
 		  
-		  // Here you would typically send the data to your backend or email service
-		  console.log('Form submitted:', formData);
+		  if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		  }
+
+		  const data = await response.json();
+		  console.log('Form submitted successfully:', data);
 		  
 		  setSubmitStatus('success');
 		  

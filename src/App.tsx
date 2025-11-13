@@ -141,7 +141,7 @@ function App() {
 		  <div
 		  	id="about-me"
 		  	className="text-base sm:text-lg md:text-xl py-4 sm:py-6 md:py-8">
-			<div className="px-4 sm:px-6 md:px-8 font-bold text-gray-100 mb-4">
+			<div className="text-center px-4 sm:px-6 md:px-8 font-bold text-gray-100 mb-4">
 				<span className="text-lg sm:text-xl md:text-2xl">Some general things about me 🪐</span>
 			</div>
 			<GeneralThingsGrid />
@@ -158,7 +158,7 @@ function App() {
 		  <div
 		  	id="education"
 		  	className="text-base sm:text-lg md:text-xl">
-			<div className="px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 font-bold text-gray-100">
+			<div className="text-center px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 font-bold text-gray-100">
 				<span className="text-lg sm:text-xl md:text-2xl">Education plays a key part in my life 📖</span>
 			</div>
 			<Education />
@@ -168,7 +168,7 @@ function App() {
 		  <div
 		  	id="portfolio"
 		  	className="text-base sm:text-lg md:text-xl">
-			<div className="px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 font-bold text-gray-100">
+			<div className="text-center px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 font-bold text-gray-100">
 				<span className="text-lg sm:text-xl md:text-2xl">Check out some of my projects 📌</span>
 			</div>
 			<Portfolio />
