@@ -91,7 +91,7 @@ export default function GeneralThingsGrid() {
 					</p>
 				</div>
 			
-				<div className="gap-6 lg:gap-8 xl:gap-12 mt-8 lg:mt-12">
+				<div className="gap-4 lg:gap-6 xl:gap-10 mt-6 lg:mt-10">
 					<div 
 					className={`text-center transition-all duration-300 cursor-pointer rounded-lg`}
 					onMouseEnter={() => setHoveredColumn(index)}

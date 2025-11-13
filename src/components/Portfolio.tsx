@@ -200,34 +200,38 @@ export default function Portfolio() {
 			</div>
 			<div
 				className={`grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6
-					justify-center text-center px-4 items-center font-bold text-gray-100 text-sm
-					gap-4 md:gap-6 rounded-lg transition-all duration-300 ease-in-out
+				justify-center text-center px-4 items-stretch font-bold text-gray-100 text-sm
+				gap-4 md:gap-6 rounded-lg transition-all duration-300 ease-in-out
 				${isTransitioning ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}
 			>
 				{currentProjects.map((project, index) => (
-					<div key={`${startIndex}-${index}`} 
-						className={`grid grid-cols-1 py-4 rounded-lg gap-y-2 
-						sm:h-[20vh] md:h-[20vh] lg:h-[20vh] xl:h-[35vh] 2xl:h-[45vh]
-						transition-all duration-300 ease-in-out transform
-						${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
-						style={{
-							backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
-							transitionDelay: `${index * 50}ms`
-						}}
-					>
-						<div className="grid grid-cols-2">
-								<img
-									src={project.image}
-									alt="Project logo"
-									className="h-12 sm:h-16 md:h-20 lg:h-22 w-auto mx-auto rounded-lg" />
-								{project.name}
-							</div>
-							<p className="px-2">
-								{project.description}
-							</p>
-							<TechStack technologies={project.techStack} />
-							<ViewDetails link={project.link}/>
-						</div>
+				<div key={`${startIndex}-${index}`} 
+					className={`flex flex-col py-4 px-2 rounded-lg gap-y-3
+					min-h-[180px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px]
+					transition-all duration-300 ease-in-out transform
+					${isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
+					style={{
+					backgroundImage: "linear-gradient(#64CCC5,#37858B,#04364A)",
+					transitionDelay: `${index * 50}ms`
+					}}
+				>
+					<div className="flex items-center gap-3 justify-center">
+					<img
+						src={project.image}
+						alt="Project logo"
+						className="h-12 sm:h-14 md:h-16 w-auto rounded-lg flex-shrink-0" />
+					<span className="text-base sm:text-lg">{project.name}</span>
+					</div>
+					
+					<p className="px-2 text-sm flex-grow overflow-auto">
+					{project.description}
+					</p>
+					
+					<div className="mt-auto space-y-3">
+					<TechStack technologies={project.techStack} />
+					<ViewDetails link={project.link}/>
+					</div>
+				</div>
 				))}
 			</div>
 			<div className={`cursor-pointer transition-transform duration-200 hover:scale-110 
