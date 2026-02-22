@@ -4,7 +4,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/PersonalWebsite/",
+  base: "/",
   plugins: [react(),
 	viteStaticCopy({
 		targets: [
@@ -15,6 +15,14 @@ export default defineConfig({
 		]
 	  })
   ],
+  server: {
+    host: true,
+    port: 8000
+  },
+  preview: {
+	host: true,
+	port: 8000
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
