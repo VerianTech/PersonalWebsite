@@ -4,83 +4,164 @@ export default function ExperienceAndSkills() {
 	const [currentPage, setCurrentPage] = useState('first');
 
 	return (
-	<div className="grid grid-cols-1 grid-cols-2 justify-center text-center py-4 px-4 items-stretch
-		font-bold text-gray-300 text-sm gap-4 md:gap-6">
-		<div className="grid grid-cols-1 justify-center gap-y-4 py-4 px-2 rounded-lg"
-			style={{
-				backgroundImage: "linear-gradient(#8aa0a7,#176b87)",
-			}}
-		>
-			<div className="grid grid-cols-10 place-items-center text-center">
-				<img
-					src="./src/assets/google.png"
-					alt="logo"
-					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
-				<div className="flex items-center justify-center col-span-7">
-					Software Engineer @ Google<br/>
-					Sept. 2024 - Present
+		<div className="hidden md:block">
+			<div className="grid grid-cols-2 justify-center text-center py-4 px-4 items-stretch
+				font-bold text-gray-300 text-sm gap-4 md:gap-6">
+				<div className="grid grid-cols-1 justify-center gap-y-4 py-4 px-2 rounded-lg"
+					style={{
+						backgroundImage: "linear-gradient(#8aa0a7,#176b87)",
+					}}
+				>
+					<div className="grid grid-cols-10 place-items-center text-center">
+						<img
+							src="./src/assets/google.png"
+							alt="logo"
+							className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+						<div className="flex items-center justify-center col-span-7">
+							Software Engineer @ Google<br/>
+							Sept. 2024 - Present
+						</div>
+					</div>
+					<div className="grid grid-cols-10 place-items-center text-center">
+						<img
+							src="./src/assets/hella.png"
+							alt="logo"
+							className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+						<div className="flex items-center justify-center col-span-7">
+							Software Engineer @ Hella<br/>
+							October 2023 - Sept. 2024
+						</div>
+					</div>
+					<div className="grid grid-cols-10 place-items-center text-center">
+						<img
+							src="./src/assets/google.png"
+							alt="logo"
+							className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+						<div className="flex items-center justify-center col-span-7">
+							Site Reliability Engineer Intern @ Google<br/>
+							July 2023 - October 2023
+						</div>
+					</div>
+					<div className="grid grid-cols-10 place-items-center text-center">
+						<img
+							src="./src/assets/thales.png"
+							alt="logo"
+							className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+						<div className="flex items-center justify-center col-span-7">
+							DevOps Engineer @ Thales<br/>
+							October 2022 - July 2023
+						</div>
+					</div>
+					<div className="grid grid-cols-10 place-items-center text-center">
+						<img
+							src="./src/assets/google.png"
+							alt="logo"
+							className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+						<div className="flex items-center justify-center col-span-7">
+							Software Engineer Intern @ Google<br/>
+							July 2022 - October 2022
+						</div>
+					</div>
+					<div className="grid grid-cols-10 place-items-center text-center">
+						<img
+							src="./src/assets/nxp.png"
+							alt="logo"
+							className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+						<div className="flex items-center justify-center col-span-7">
+							Test Developer Intern @ NXP<br/>
+							June 2021 - July 2022
+						</div>
+					</div>
+				</div>
+				<div className="relative overflow-hidden">
+					<div className={`transition-transform duration-500 ${currentPage === 'first' ? 'translate-x-0' : '-translate-x-full'}`}>
+						<TechStack onDivClick={() => setCurrentPage('second')}/>
+					</div>
+					<div className={`absolute top-0 left-0 w-full transition-transform duration-500 ${currentPage === 'second' ? 'translate-x-0' : 'translate-x-full'}`}>
+						<ToolsStack onDivClick={() => setCurrentPage('first')}/>
+					</div>
 				</div>
 			</div>
-			<div className="grid grid-cols-10 place-items-center text-center">
-				<img
-					src="./src/assets/hella.png"
-					alt="logo"
-					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
-				<div className="flex items-center justify-center col-span-7">
-					Software Engineer @ Hella<br/>
-					October 2023 - Sept. 2024
-				</div>
-			</div>
-			<div className="grid grid-cols-10 place-items-center text-center">
-				<img
-					src="./src/assets/google.png"
-					alt="logo"
-					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
-				<div className="flex items-center justify-center col-span-7">
-					Site Reliability Engineer Intern @ Google<br/>
-					July 2023 - October 2023
-				</div>
-			</div>
-			<div className="grid grid-cols-10 place-items-center text-center">
-				<img
-					src="./src/assets/thales.png"
-					alt="logo"
-					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
-				<div className="flex items-center justify-center col-span-7">
-					DevOps Engineer @ Thales<br/>
-					October 2022 - July 2023
-				</div>
-			</div>
-			<div className="grid grid-cols-10 place-items-center text-center">
-				<img
-					src="./src/assets/google.png"
-					alt="logo"
-					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
-				<div className="flex items-center justify-center col-span-7">
-					Software Engineer Intern @ Google<br/>
-					July 2022 - October 2022
-				</div>
-			</div>
-			<div className="grid grid-cols-10 place-items-center text-center">
-				<img
-					src="./src/assets/nxp.png"
-					alt="logo"
-					className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
-				<div className="flex items-center justify-center col-span-7">
-					Test Developer Intern @ NXP<br/>
-					June 2021 - July 2022
+			<div className="block md:hidden">
+				<div className="grid grid-rows-2 justify-center text-center py-4 px-4 items-stretch
+					font-bold text-gray-300 text-sm gap-4 md:gap-6">
+					<div className="grid grid-cols-2 justify-center gap-y-4 py-4 px-2 rounded-lg"
+						style={{
+							backgroundImage: "linear-gradient(#8aa0a7,#176b87)",
+						}}
+					>
+						<div className="grid grid-cols-10 place-items-center text-center">
+							<img
+								src="./src/assets/google.png"
+								alt="logo"
+								className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+							<div className="flex items-center justify-center col-span-7">
+								Software Engineer @ Google<br/>
+								Sept. 2024 - Present
+							</div>
+						</div>
+						<div className="grid grid-cols-10 place-items-center text-center">
+							<img
+								src="./src/assets/hella.png"
+								alt="logo"
+								className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+							<div className="flex items-center justify-center col-span-7">
+								Software Engineer @ Hella<br/>
+								October 2023 - Sept. 2024
+							</div>
+						</div>
+						<div className="grid grid-cols-10 place-items-center text-center">
+							<img
+								src="./src/assets/google.png"
+								alt="logo"
+								className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+							<div className="flex items-center justify-center col-span-7">
+								Site Reliability Engineer Intern @ Google<br/>
+								July 2023 - October 2023
+							</div>
+						</div>
+						<div className="grid grid-cols-10 place-items-center text-center">
+							<img
+								src="./src/assets/thales.png"
+								alt="logo"
+								className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+							<div className="flex items-center justify-center col-span-7">
+								DevOps Engineer @ Thales<br/>
+								October 2022 - July 2023
+							</div>
+						</div>
+						<div className="grid grid-cols-10 place-items-center text-center">
+							<img
+								src="./src/assets/google.png"
+								alt="logo"
+								className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+							<div className="flex items-center justify-center col-span-7">
+								Software Engineer Intern @ Google<br/>
+								July 2022 - October 2022
+							</div>
+						</div>
+						<div className="grid grid-cols-10 place-items-center text-center">
+							<img
+								src="./src/assets/nxp.png"
+								alt="logo"
+								className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto col-span-3" />
+							<div className="flex items-center justify-center col-span-7">
+								Test Developer Intern @ NXP<br/>
+								June 2021 - July 2022
+							</div>
+						</div>
+					</div>
+					<div className="relative overflow-hidden">
+						<div className={`transition-transform duration-500 ${currentPage === 'first' ? 'translate-x-0' : '-translate-x-full'}`}>
+							<TechStack onDivClick={() => setCurrentPage('second')}/>
+						</div>
+						<div className={`absolute top-0 left-0 w-full transition-transform duration-500 ${currentPage === 'second' ? 'translate-x-0' : 'translate-x-full'}`}>
+							<ToolsStack onDivClick={() => setCurrentPage('first')}/>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div className="relative overflow-hidden">
-			<div className={`transition-transform duration-500 ${currentPage === 'first' ? 'translate-x-0' : '-translate-x-full'}`}>
-				<TechStack onDivClick={() => setCurrentPage('second')}/>
-			</div>
-			<div className={`absolute top-0 left-0 w-full transition-transform duration-500 ${currentPage === 'second' ? 'translate-x-0' : 'translate-x-full'}`}>
-				<ToolsStack onDivClick={() => setCurrentPage('first')}/>
-			</div>
-		</div>
-	</div>
   );
 }
 
